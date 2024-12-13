@@ -21,7 +21,7 @@ export type BaseSystemFields<T = never> = {
 \tid: ${RECORD_ID_STRING_NAME}
 \tcollectionId: string
 \tcollectionName: Collections
-\texpand?: T
+\texpand: T extends never ? T | undefined : T
 }`
 
 export const AUTH_SYSTEM_FIELDS_DEFINITION = `export type AuthSystemFields<T = never> = {
